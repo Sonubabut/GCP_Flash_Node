@@ -15,7 +15,7 @@ class Server {
   }
 
   routes() {
-    this.app.post("/flash/response", (req, res) => {
+    this.app.post("/fast/response", (req, res) => {
       this.getResponseGenAI(req, res);
     });
   }
