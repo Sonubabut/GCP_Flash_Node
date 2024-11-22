@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
+import cors from "cors";
 import logger from "./logging.js";
 import GenAI from "./genAi.js";
 
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 class Server {
   constructor() {
     this.app = express();
+    this.app.use(cors());
     this.app.use(express.json());
     this.routes();
   }
